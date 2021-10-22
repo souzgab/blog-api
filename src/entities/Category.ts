@@ -1,4 +1,4 @@
-import { uuid } from 'uuidv4';
+import { v4 } from 'uuid';
 
 export class Category {
 
@@ -11,7 +11,7 @@ export class Category {
         Object.assign(this, props);
 
         if (!id) {
-            this.id = uuid()
+            this.id = v4()
         } 
     }
 }

@@ -13,4 +13,4 @@ const createPostController = new CreatePostController(
     createPostUseCase
 );
 
-export { createPostController, createPostUseCase };
+export { createPostUseCase, createPostController };

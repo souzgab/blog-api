@@ -99,5 +99,5 @@
   },
   "include": [
     "src/**/*.ts"
-  ]
+, "src/useCases/Post/CreatePost.useCase"  ]
 }

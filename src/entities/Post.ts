@@ -1,7 +1,6 @@
+import { v4 } from 'uuid';
 import { Category } from './Category';
 import { Author } from './Author';
-import { uuid } from "uuidv4";
-
 export class Post {
 
     public readonly id: string;
@@ -15,7 +14,7 @@ export class Post {
         Object.assign(this, props);
 
         if (!id) {
-            this.id = uuid()
+            this.id = v4()
         } 
     }
 

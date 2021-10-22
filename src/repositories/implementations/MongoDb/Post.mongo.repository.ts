@@ -15,4 +15,8 @@ export class PostMongoRepository implements IPostRepository {
     async save(post: Post): Promise<void> {
         this.posts.push(post);
     }
+
+    async find(): Promise<Post[]> {
+        return this.posts
+    }
 }

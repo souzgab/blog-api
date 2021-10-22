@@ -12,7 +12,8 @@ export class CreatePostUseCase {
     }
 
     async execute(data: ICreatePostRequestDTO) {
-        await this.postRepository.save(new Post(data))
+        const post = new Post(data)
+        return await this.postRepository.save(post)
     }
 
 }
