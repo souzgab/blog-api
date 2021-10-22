@@ -23,6 +23,15 @@ export class PostEntity implements IPost  {
 
     @Column({ type: 'varchar', nullable: false })
     title: string
+    
+    @Column({ type: 'varchar', nullable: false })
+    description: string
+
+    @Column({ type: 'array', nullable: false })
+    Category: Category[];
+
+    @Column({ type: 'json', nullable: false })
+    author: Author;
 
     @CreateDateColumn({ type: 'timestamp', nullable: false })
     createdAt: Date;
@@ -36,4 +45,4 @@ export class PostEntity implements IPost  {
     }
 }
 
-export default new Product();
+export default new PostEntity();
