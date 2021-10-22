@@ -1,7 +1,7 @@
 import { v4 } from 'uuid';
 import { Category } from './Category';
 import { Author } from './Author';
-export class Post {
+export class Post implements IPost{
 
     public readonly id: string;
 

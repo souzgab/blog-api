@@ -4,7 +4,7 @@ import { getPostController } from '../useCases/Post/GetPosts.useCase.ts'
 
 const postsRouter = Router()
 
-postsRouter.post('/post', createPostController.handle)
-postsRouter.get('/post', getPostController.handle)
+postsRouter.post('/post', (request, response) => createPostController.handle(request, response))
+postsRouter.get('/post', (request, response) => getPostController.handle(request, response))
 
 export {postsRouter}
