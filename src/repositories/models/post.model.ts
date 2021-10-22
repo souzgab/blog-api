@@ -28,7 +28,7 @@ export class PostEntity implements IPost  {
     description: string
 
     @Column({ type: 'array', nullable: false })
-    Category: Category[];
+    category: Category[];
 
     @Column({ type: 'json', nullable: false })
     author: Author;
