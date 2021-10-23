@@ -1,5 +1,5 @@
-import { GetPostUseCase } from "./GetPosts.useCase";
 import { Request, Response } from 'express';
+import { GetPostUseCase } from './GetPosts.useCase';
 
 export class GetPostController {
 

@@ -1,5 +1,5 @@
 import { Author } from './../../entities/Author';
-import { BeforeInsert, Column, CreateDateColumn, Entity, ObjectIdColumn, UpdateDateColumn } from "typeorm";
+import { BeforeInsert, Column, CreateDateColumn, Entity, ObjectIdColumn, PrimaryColumn, UpdateDateColumn } from "typeorm";
 import { ObjectID } from 'typeorm';
 import { v4 } from 'uuid';
 import { Category } from "../../entities/Category";
@@ -18,7 +18,7 @@ export class PostEntity implements IPost  {
     @ObjectIdColumn()
     _id: ObjectID;
 
-    @Column({ type: 'uuid', generated: 'uuid', unique: true })
+    @PrimaryColumn({ type: 'uuid', generated: 'uuid', unique: true })
     id: string;
 
     @Column({ type: 'varchar', nullable: false })
