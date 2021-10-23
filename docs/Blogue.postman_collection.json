@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "fbf607aa-ee5b-43a0-b7f0-da4079758543",
+		"name": "Blogue",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Post Api",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"title\":\"Saude\",\r\n\t\"description\": \"setor tech cresce na área\",\r\n\t\"author\": {\r\n\t\t\"name\": \"Gabriel\",\r\n\t\t\"email\": \"gabriel@email.com\"\r\n\t},\r\n\t\"category\": [\r\n\t\t{\r\n\t\t\t\"name\": \"Tecnologia\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"Saúde\"\r\n\t\t}\r\n\t]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/post",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Post Api",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"5d217dc4-99aa-4746-8a54-2b061be91699\",\r\n\t\"title\":\"Data\",\r\n\t\"description\": \"Tech tem alta\",\r\n\t\"author\": {\r\n\t\t\"name\": \"Gabriel\",\r\n\t\t\"email\": \"gabriel@email.com\"\r\n\t},\r\n\t\"category\": [\r\n\t\t{\r\n\t\t\t\"name\": \"Tecnologia\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"name\": \"Saúde\"\r\n\t\t}\r\n\t]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/post",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9090/post",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Post Api",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"0e8ee749-f64d-4149-a3cb-c75cf5b4da8b\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/post",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"post"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
