@@ -33,6 +33,6 @@ describe('CreatePostUseCase', () => {
             description: '',
             author: undefined,
             category: []
-        }).catch(e => expect(e).toMatch('InvalidBody'))
+        }).catch(e => expect(e.message).toMatch('InvalidBody'))
     })
 })

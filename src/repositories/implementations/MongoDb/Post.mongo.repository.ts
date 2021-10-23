@@ -15,7 +15,6 @@ export class PostMongoRepository implements IPostRepository {
     }
 
     async save(post: Post): Promise<void> {
-        console.log(post)
         await getConnection()
         .getRepository(PostEntity)
         .save(
