@@ -9,10 +9,8 @@ export class CreatePostController {
     ) {}
 
     async handle(request: Request, response: Response): Promise<Response> {
-        const post = request.body as ICreatePostRequestDTO
-
         try {
-            await this.createPostUseCase.execute(post)
+            await this.createPostUseCase.execute(request.body as ICreatePostRequestDTO)
             return response.status(201).send()
         } catch (error) {
             return response.status(400).json({ message: error.message || 'Internal Server Error' })

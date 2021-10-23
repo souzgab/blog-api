@@ -1,22 +1,33 @@
+import { PostEntity } from './../../models/post.model';
 import { Author } from './../../../entities/Author';
 import { Post } from './../../../entities/Post';
 import { IPostRepository } from './../../Post.repository';
+import { getConnection } from 'typeorm';
 
 export class PostMongoRepository implements IPostRepository {
 
-    private posts: Post[] = [];
-
-    constructor() {}
+    constructor(){}
 
     async findByAuthor(author: Author): Promise<Post> {
-        return this.posts.find(post => post.author === author)
+        return await getConnection().getRepository(PostEntity).findOne({
+            where: { author: author }
+        })
     }
 
     async save(post: Post): Promise<void> {
-        this.posts.push(post);
+        console.log(post)
+        await getConnection()
+        .getRepository(PostEntity)
+        .save(
+            getConnection()
+            .getRepository(PostEntity)
+            .create(post)
+        )
     }
 
     async find(): Promise<Post[]> {
-        return this.posts
+        return await getConnection()
+        .getRepository(PostEntity)
+        .find()
     }
 }

@@ -1,6 +1,7 @@
 import { v4 } from 'uuid';
 import { Category } from './Category';
 import { Author } from './Author';
+import { IPost } from '../repositories/models/post.model';
 export class Post implements IPost{
 
     public readonly id: string;

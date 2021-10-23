@@ -1,3 +1,4 @@
+import { PostEntity } from './../repositories/models/post.model';
 import { env } from './env.config';
 import { createConnection } from 'typeorm'
 
@@ -8,7 +9,7 @@ createConnection({
     useUnifiedTopology: true,
     useNewUrlParser: true,
     entities: [
-        
+        PostEntity
     ],
     logging: 'all',
     logger: 'simple-console',
