@@ -1,5 +1,5 @@
 import { IPostRepository } from '../../../repositories/Post.repository';
-import { Post } from './../../../entities/Post';
+import { Post } from '../../../entities/Post';
 
 export class GetPostUseCase {
 

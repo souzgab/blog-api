@@ -1,6 +1,6 @@
+import { GetPostUseCase } from './GetPosts.useCase';
 import { GetPostController } from './GetPost.controller';
 import { PostMongoRepository } from '../../../repositories/implementations/MongoDb/Post.mongo.repository';
-import { GetPostUseCase } from './GetPosts.useCase';
 
 
 const postRepository = new PostMongoRepository();

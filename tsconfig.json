@@ -100,5 +100,5 @@
   },
   "include": [
     "src/**/*.ts"
-, "src/useCases/Post/CreatePost.useCase"  ]
+, "src/useCases/Post/CreatePost.useCase", "src/useCases/Post/EditPost.useCase"  ]
 }
