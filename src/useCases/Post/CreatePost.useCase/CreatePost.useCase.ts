@@ -12,8 +12,22 @@ export class CreatePostUseCase {
     }
 
     async execute(data: ICreatePostRequestDTO) {
+
+        if(this.invalidObject(data)) return new Error('InvalidBody')  
+
         const post = new Post(data)
         return await this.postRepository.save(post)
+    }
+
+
+    private invalidObject(data: ICreatePostRequestDTO): boolean {
+        const obj = []
+        for(const key in data) {
+            if (!data[key] || data[key].length === 0) {
+                obj.push(true)
+            }
+        }
+        return obj.some((invalid) => invalid)
     }
 
 }
